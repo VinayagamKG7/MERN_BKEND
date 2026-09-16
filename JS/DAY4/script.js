@@ -48,3 +48,36 @@ console.log(product.addStock(10));
 console.log(product.sellProduct(8));
 console.log(product.sellProduct(20));
 
+
+
+
+
+let arr = [] ;
+
+function display(){
+
+  while( true ){
+    
+    let input = +prompt( "Enter a number :" , 0 )   
+    if( input<0 ){
+      break ;
+    }
+    else{
+          arr.push( input ) ;
+    }
+  }
+  return arr ;
+}
+
+let result = display().filter( elem => elem % 2 === 0 ).reduce( (acc , item) => {
+  return acc + item ;
+} , 0)
+
+console.log( `The sum of even nos.is ${result}`) ;
+
+
+
+
+
+
+
